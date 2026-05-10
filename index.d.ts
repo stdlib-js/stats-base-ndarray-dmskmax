@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,17 +16,28 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { float64ndarray, uint8ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute the maximum value of a one-dimensional double-precision floating-point ndarray according to a mask.
+* Computes the maximum value of a one-dimensional double-precision floating-point ndarray according to a mask.
 *
-* @module @stdlib/stats-base-ndarray-dmskmax
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*     -   a one-dimensional mask ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns maximum value
 *
 * @example
 * var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
 * var Uint8Vector = require( '@stdlib/ndarray-vector-uint8' );
-* var dmskmax = require( '@stdlib/stats-base-ndarray-dmskmax' );
 *
 * var x = new Float64Vector( [ 1.0, -2.0, 4.0, 2.0 ] );
 * var mask = new Uint8Vector( [ 0, 0, 1, 0 ] );
@@ -34,12 +45,9 @@
 * var v = dmskmax( [ x, mask ] );
 * // returns 2.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function dmskmax( arrays: [ float64ndarray, uint8ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = dmskmax;
