@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2026 The Stdlib Authors.
+* Copyright (c) 2025 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,16 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var serialize = require( '@stdlib/ndarray-base-serialize-meta-data' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var addon = require( './../src/addon.node' );
-
-
-// MAIN //
+import { float64ndarray, uint8ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the maximum value of a one-dimensional double-precision floating-point ndarray according to a mask.
@@ -37,9 +32,8 @@ var addon = require( './../src/addon.node' );
 *     -   a one-dimensional input ndarray.
 *     -   a one-dimensional mask ndarray.
 *
-* @private
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {number} maximum value
+* @param arrays - array-like object containing ndarrays
+* @returns maximum value
 *
 * @example
 * var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
@@ -51,13 +45,9 @@ var addon = require( './../src/addon.node' );
 * var v = dmskmax( [ x, mask ] );
 * // returns 2.0
 */
-function dmskmax( arrays ) {
-	var mask = arrays[ 1 ];
-	var x = arrays[ 0 ];
-	return addon( getData( x ), serialize( x ), getData( mask ), serialize( mask ) ); // eslint-disable-line max-len
-}
+declare function dmskmax( arrays: [ float64ndarray, uint8ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = dmskmax;
+export = dmskmax;
