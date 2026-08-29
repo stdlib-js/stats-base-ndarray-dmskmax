@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-03)
+## Unreleased (2026-08-29)
+
+<section class="features">
+
+### Features
+
+-   [`eee25f9`](https://github.com/stdlib-js/stdlib/commit/eee25f941c11c72a525b88ca19e3e71f2fe24d44) - add C implementation for `stats/base/ndarray/dmskmax` [(#14419)](https://github.com/stdlib-js/stdlib/pull/14419)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`eee25f9`](https://github.com/stdlib-js/stdlib/commit/eee25f941c11c72a525b88ca19e3e71f2fe24d44) - **feat:** add C implementation for `stats/base/ndarray/dmskmax` [(#14419)](https://github.com/stdlib-js/stdlib/pull/14419) _(by Ujjwal Verma, Athan Reines)_
 -   [`660a800`](https://github.com/stdlib-js/stdlib/commit/660a8009dc78e95f22e761ae0487d221fc3b74d4) - **chore:** modernize examples and benchmarks _(by Athan Reines)_
 
 </details>
@@ -24,9 +35,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Ujjwal Verma
 
 </section>
 
